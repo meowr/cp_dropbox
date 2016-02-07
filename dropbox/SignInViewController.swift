@@ -10,8 +10,18 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var fieldView: UIView!
+        var initialY: CGFloat!
+        var offset: CGFloat!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initialY = fieldView.frame.origin.y
+        offset = -50
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,7 +32,19 @@ class SignInViewController: UIViewController {
     @IBAction func backButton(sender: AnyObject) {
         navigationController!.popViewControllerAnimated(true)
     }
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        fieldView.frame.origin.y = initialY + offset
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        fieldView.frame.origin.y = initialY
+    }
 
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     /*
     // MARK: - Navigation
 
