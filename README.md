@@ -19,7 +19,8 @@ Completed user stories:
 * [x] Optional: User can actually type in the sign-in form and dismiss the keyboard.
 * [x] Optional: User can swipe through the welcome screens instead of just tapping them.
 
-Notes: Made the favorite toggle on and off.
+Notes: Favorite state is saved and can be toggled on and off.
+
 
 ![Video Walkthrough](dropbox_demo.gif)
 
