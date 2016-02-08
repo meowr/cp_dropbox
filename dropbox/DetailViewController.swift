@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var favorited = false;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,8 @@ class DetailViewController: UIViewController {
     
 
     @IBAction func favoriteButton(sender: UIButton) {
-        sender.selected = true
+        favorited = !favorited
+        sender.selected = favorited
     }
 
     @IBAction func onButton(sender: AnyObject) {
