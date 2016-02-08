@@ -1,4 +1,6 @@
-# This is a prototype of the Dropbox iPhone app.
+# Week 1 Project - Dropbox
+
+This is an interactive prototype of the Dropbox iPhone app.
 
 Time spent: 6 hours spent in total
 
@@ -18,3 +20,7 @@ Completed user stories:
 * [x] Optional: User can swipe through the welcome screens instead of just tapping them.
 
 Notes: Made the favorite toggle on and off.
+
+![Video Walkthrough](dropbox_demo.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/)
